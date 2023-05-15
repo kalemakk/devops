@@ -6,13 +6,17 @@ kubectl create -f cv-app-namespace.yaml
 # start the deployment using
  kubectl create -f cv-app-deployment.yaml
 
-# check if pod is running
+![Alt Final Output](readme-images/deployment.png)
+
+## check if pod is running
   kubectl get pods -n cv-namespace
 
 # start the service
 kubectl get svc -n cv-namespace
 
-# check if service was started successfully
+![Alt Final Output](readme-images/service.png)
+
+## check if service was started successfully
 kubectl describe svc cv-service -n cv-namespace
 
 # start ingress
