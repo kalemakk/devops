@@ -22,3 +22,5 @@ kubectl describe ingress cv-ingress -n cv-namespace
 
 # NB:
 To install and get started with nginx ingress follow this link https://kubernetes.github.io/ingress-nginx/deploy/#quick-start 
+
+![Alt Final Output](readme-images/page.png)
