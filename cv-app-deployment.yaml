@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cv-deployment
+  namespace: cv-namespace
+  labels:
+    app: cv-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cv-app
+  template:
+    metadata:
+      labels:
+        app: cv-app
+    spec:
+      containers:
+      - name: cv-app
+        image: arnoldkksybyl/mycv:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
